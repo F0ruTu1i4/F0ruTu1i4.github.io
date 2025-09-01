@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Love Story - A Journey Through Heartbreak</title>
+    <meta name="description" content="An emotional journey through love and loss, from meeting online to heartbreak. Experience our story through 5 chapters with beautiful animations." />
+    <meta name="author" content="Love Story" />
+
+    <meta property="og:title" content="Our Love Story - A Journey Through Heartbreak" />
+    <meta property="og:description" content="An emotional journey through love and loss, from meeting online to heartbreak." />
+    <meta property="og:type" content="website" />
+    
+
+    <meta name="twitter:card" content="summary_large_image" />
+
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <footer style="text-align:center; margin-top:2rem; color:#da7e33; font-size:0.9rem;">
+      &copy; 2025 Our Love Story. All rights reserved. Build by Abid
+    </footer>
+
+    <audio id="bg-music" loop autoplay>
+        <source src="public/music/bgm.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    
+    <button 
+      id="music-toggle" 
+      style="position:fixed;bottom:2rem;right:2rem;z-index:1000;padding:0.7em 1.2em;border-radius:2em;background:#fff;color:#da7e33;border:1px solid #da7e33;box-shadow:0 2px 8px #0001;cursor:pointer;font-size:1rem;"
+      onclick="toggleMusic()"
+    >
+      🔊 Music On
+    </button>
+    <script>
+      // Simple music toggle system
+      const audio = document.getElementById('bg-music');
+      const btn = document.getElementById('music-toggle');
+      let playing = false;
+
+      function toggleMusic() {
+        if (playing) {
+          audio.pause();
+          btn.textContent = '🔇 Music Off';
+        } else {
+          audio.play();
+          btn.textContent = '🔊 Music On';
+        }
+        playing = !playing;
+      }
+
+      // Optional: Pause music when user leaves the page
+      window.addEventListener('beforeunload', () => {
+        audio.pause();
+      });
+    </script>
+    
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
