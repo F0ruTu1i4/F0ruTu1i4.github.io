@@ -1,0 +1,229 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Emotional Love Story Design System */
+
+@layer base {
+  :root {
+    /* Stage 1: Meeting Online - Warm Connection */
+    --stage-1-bg: 14 85% 96%;
+    --stage-1-primary: 14 78% 70%;
+    --stage-1-accent: 24 85% 75%;
+    
+    /* Stage 2: Growing Closer - Golden Hour */
+    --stage-2-bg: 35 90% 95%;
+    --stage-2-primary: 35 85% 65%;
+    --stage-2-accent: 45 88% 72%;
+    
+    /* Stage 3: First Date - Romantic Sunset */
+    --stage-3-bg: 350 85% 96%;
+    --stage-3-primary: 350 75% 68%;
+    --stage-3-accent: 15 85% 75%;
+    
+    /* Stage 4: Happy Together - Dreamy Love */
+    --stage-4-bg: 300 70% 95%;
+    --stage-4-primary: 300 65% 70%;
+    --stage-4-accent: 320 75% 75%;
+    
+    /* Stage 5: Heartbreak - Cold Sadness */
+    --stage-5-bg: 210 15% 20%;
+    --stage-5-primary: 210 25% 35%;
+    --stage-5-accent: 220 30% 45%;
+    --stage-5-text: 210 10% 80%;
+    
+    /* Global Design Tokens */
+    --background: 0 0% 100%;
+    --foreground: 220 15% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 15% 15%;
+    --primary: 14 78% 70%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 220 15% 15%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+    --accent: 24 85% 75%;
+    --accent-foreground: 220 15% 15%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 14 78% 70%;
+    --radius: 1rem;
+    
+    /* Love Story Gradients */
+    --gradient-love: linear-gradient(135deg, hsl(var(--stage-3-primary)), hsl(var(--stage-3-accent)));
+    --gradient-connection: linear-gradient(135deg, hsl(var(--stage-1-primary)), hsl(var(--stage-2-primary)));
+    --gradient-heartbreak: linear-gradient(135deg, hsl(var(--stage-5-primary)), hsl(var(--stage-5-accent)));
+    --gradient-joy: linear-gradient(135deg, hsl(var(--stage-4-primary)), hsl(var(--stage-4-accent)));
+    
+    /* Emotional Shadows */
+    --shadow-love: 0 20px 60px -12px hsl(var(--stage-3-primary) / 0.25);
+    --shadow-heartbreak: 0 20px 60px -12px hsl(var(--stage-5-primary) / 0.4);
+    --shadow-connection: 0 10px 30px -10px hsl(var(--stage-1-primary) / 0.3);
+    
+    /* Animation Easing */
+    --ease-love: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --ease-heartbreak: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  /* Character Animation Classes */
+  .character-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .character-heartbeat {
+    animation: heartbeat 2s ease-in-out infinite;
+  }
+  
+  .character-crying {
+    animation: crying 3s ease-in-out infinite;
+  }
+  
+  .character-walking {
+    animation: walking 4s ease-in-out infinite;
+  }
+  
+  .character-hugging {
+    animation: hugging 3s ease-in-out infinite;
+  }
+  
+  .tears {
+    animation: tears-fall 2s ease-in infinite;
+  }
+  
+  /* Emotional Background Effects */
+  .love-glow {
+    background: var(--gradient-love);
+    box-shadow: var(--shadow-love);
+  }
+  
+  .heartbreak-shadow {
+    background: var(--gradient-heartbreak);
+    box-shadow: var(--shadow-heartbreak);
+  }
+  
+  .connection-warm {
+    background: var(--gradient-connection);
+    box-shadow: var(--shadow-connection);
+  }
+  
+  .joy-radiant {
+    background: var(--gradient-joy);
+    box-shadow: var(--shadow-love);
+  }
+}
+
+@layer utilities {
+  /* Stage-specific utilities */
+  .stage-1-bg { background: hsl(var(--stage-1-bg)); }
+  .stage-1-text { color: hsl(var(--stage-1-primary)); }
+  .stage-2-bg { background: hsl(var(--stage-2-bg)); }
+  .stage-2-text { color: hsl(var(--stage-2-primary)); }
+  .stage-3-bg { background: hsl(var(--stage-3-bg)); }
+  .stage-3-text { color: hsl(var(--stage-3-primary)); }
+  .stage-4-bg { background: hsl(var(--stage-4-bg)); }
+  .stage-4-text { color: hsl(var(--stage-4-primary)); }
+  .stage-5-bg { background: hsl(var(--stage-5-bg)); }
+  .stage-5-text { color: hsl(var(--stage-5-text)); }
+}
+
+/* Love Story Keyframes */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes heartbeat {
+  0%, 50%, 100% { transform: scale(1); }
+  25%, 75% { transform: scale(1.1); }
+}
+
+@keyframes crying {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  25% { transform: translateY(-5px) rotate(-2deg); }
+  75% { transform: translateY(-5px) rotate(2deg); }
+}
+
+@keyframes walking {
+  0%, 100% { transform: translateX(0px) rotate(0deg); }
+  25% { transform: translateX(5px) rotate(1deg); }
+  75% { transform: translateX(-5px) rotate(-1deg); }
+}
+
+@keyframes hugging {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  50% { transform: scale(1.05) rotate(1deg); }
+}
+
+@keyframes tears-fall {
+  0% { opacity: 1; transform: translateY(0px); }
+  100% { opacity: 0; transform: translateY(100px); }
+}
